@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>gameStoB - Home</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="glitch-bg" id="glitchBg" aria-hidden="true">
+    <div class="glitch-bg__slice"></div>
+    <div class="glitch-bg__noise"></div>
+    <div class="glitch-bg__glow" id="glitchGlow"></div>
+    <div class="glitch-bg__rgb"></div>
+    <div class="glitch-bg__scanlines"></div>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="gameStoB home">
+        <img src="assets/logo.png" alt="" class="logo-img" width="42" height="42">
+        <span class="logo-text">gameStoB</span>
+      </a>
+      <button type="button" class="nav-toggle" id="navToggle" aria-label="Toggle menu">Menu</button>
+      <nav class="main-nav" id="mainNav">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="catalog.html">Catalog</a></li>
+          <li><a href="purchase.html">Purchase</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="locations.html">Locations</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <form class="search-form" role="search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/>
+          </svg>
+          <input type="search" placeholder="Search games..." aria-label="Search games">
+        </form>
+        <a href="purchase.html" class="cart-link" aria-label="Cart, 2 items">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+          </svg>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </a>
+        <button type="button" class="btn-login">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+          </svg>
+          Login
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section" aria-label="Promotional carousel">
+      <div class="hero-carousel" id="heroCarousel">
+        <div class="hero-track-wrapper">
+          <div class="hero-track" id="heroTrack">
+            <div class="hero-slide">
+              <img class="hero-slide__bg" src="assets/hero-slide-1.jpg" >
+              <div class="hero-slide__overlay"></div>
+              <div class="hero-slide__content">
+                <p class="hero-slide__label">SUMMER</p>
+                <h1 class="hero-slide__title">MEGA SALE</h1>
+                <p class="hero-slide__discount">UP TO <strong>80%</strong> OFF</p>
+                <p class="hero-slide__desc">Great games. Bigger savings. Limited time only!</p>
+                <a href="catalog.html" class="btn-shop">SHOP NOW &gt;</a>
+              </div>
+            </div>
+            <div class="hero-slide">
+              <img class="hero-slide__bg" src="assets/hero-slide-2.jpg" alt="Retro pixel dungeon battle scene">
+              <div class="hero-slide__overlay"></div>
+              <div class="hero-slide__content">
+                <p class="hero-slide__label">RETRO</p>
+                <h1 class="hero-slide__title">CLASSICS</h1>
+                <p class="hero-slide__discount">UP TO <strong>60%</strong> OFF</p>
+                <p class="hero-slide__desc">Indie gems and pixel adventures at epic prices.</p>
+                <a href="catalog.html" class="btn-shop">SHOP NOW &gt;</a>
+              </div>
+            </div>
+            <div class="hero-slide">
+              <img class="hero-slide__bg" src="assets/hero-slide-3.jpg" alt="Astronauts watching a spaceship in deep space">
+              <div class="hero-slide__overlay"></div>
+              <div class="hero-slide__content">
+                <p class="hero-slide__label">NEW</p>
+                <h1 class="hero-slide__title">RELEASES</h1>
+                <p class="hero-slide__discount">FROM <strong>$19.99</strong></p>
+                <p class="hero-slide__desc">Explore the galaxy with the latest sci-fi titles.</p>
+                <a href="catalog.html" class="btn-shop">SHOP NOW &gt;</a>
+              </div>
+            </div>
+            <div class="hero-slide">
+              <img class="hero-slide__bg" src="assets/hero-slide-4.jpg" alt="Warrior overlooking ancient Egyptian temples at sunset">
+              <div class="hero-slide__overlay"></div>
+              <div class="hero-slide__content">
+                <p class="hero-slide__label">ADVENTURE</p>
+                <h1 class="hero-slide__title">AWAITS</h1>
+                <p class="hero-slide__discount">SAVE <strong>40%</strong></p>
+                <p class="hero-slide__desc">Epic open-world journeys and story-driven hits.</p>
+                <a href="catalog.html" class="btn-shop">SHOP NOW &gt;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="hero-arrow hero-arrow--prev" id="heroPrev" aria-label="Previous slide">&lsaquo;</button>
+        <button type="button" class="hero-arrow hero-arrow--next" id="heroNext" aria-label="Next slide">&rsaquo;</button>
+        <div class="hero-dots" id="heroDots"></div>
+      </div>
+    </section>
+
+    <section class="features-bar" aria-label="Store features">
+      <div class="feature-item">
+        <img src="assets/authentic.png" alt="" class="logo-img" width="50" height="50">
+        <div>
+          <h3>100% Authentic Keys</h3>
+          <p>Official and safe. Guaranteed.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <img src="assets/fastDel.png" alt="" class="logo-img" width="50" height="50">
+        <div>
+          <h3>Instant Delivery</h3>
+          <p>Get your game in seconds.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <img src="assets/24per7.png" alt="" class="logo-img" width="50" height="50">
+        <div>
+          <h3>24/7 Customer Support</h3>
+          <p>We're here to help anytime.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="home-layout">
+        <div class="home-main">
+          <section>
+            <div class="section-header">
+              <h2>Latest Releases</h2>
+              <a href="catalog.html" class="link-view-all">View All</a>
+            </div>
+            <div class="releases-grid">
+              <article class="release-card">
+                <div class="release-card__img-wrap">
+                  <img src="assets/game-placeholder .jpg" >
+                  <span class="badge-new">NEW</span>
+                </div>
+                <div class="release-card__body">
+                  <h3 class="release-card__title">FAR CRY 6</h3>
+                  <p class="release-card__subtitle">Expansion Edition</p>
+                  <div class="release-card__meta">
+                    <span class="release-card__platform">XBOX</span>
+                    <span class="release-card__price">USD 39.99</span>
+                  </div>
+                </div>
+              </article>
+              <article class="release-card">
+                <div class="release-card__img-wrap">
+                  <img src="assets/game-placeholder 1.png" >
+                  <span class="badge-new">NEW</span>
+                </div>
+                <div class="release-card__body">
+                  <h3 class="release-card__title">Mario Kart: World Tour</h3>
+                  <p class="release-card__subtitle">Standard Edition</p>
+                  <div class="release-card__meta">
+                    <span class="release-card__platform">Nintendo Switch</span>
+                    <span class="release-card__price">USD 39.99</span>
+                  </div>
+                </div>
+              </article>
+              <article class="release-card">
+                <div class="release-card__img-wrap">
+                  <img src="assets/game-placeholder 2.jpg" >
+                  <span class="badge-new">NEW</span>
+                </div>
+                <div class="release-card__body">
+                  <h3 class="release-card__title">PLAQUETALE REQUIEM</h3>
+                  <p class="release-card__subtitle">Deluxe Edition</p>
+                  <div class="release-card__meta">
+                    <span class="release-card__platform">PS5</span>
+                    <span class="release-card__price">USD 49.99</span>
+                  </div>
+                </div>
+              </article>
+              <article class="release-card">
+                <div class="release-card__img-wrap">
+                  <img src="assets/game-placeholder 3.jpg" >
+                  <span class="badge-new">NEW</span>
+                </div>
+                <div class="release-card__body">
+                  <h3 class="release-card__title">Call Of Duty Black Ops</h3>
+                  <p class="release-card__subtitle">Champions Edition</p>
+                  <div class="release-card__meta">
+                    <span class="release-card__platform">Xbox</span>
+                    <span class="release-card__price">USD 59.99</span>
+                  </div>
+                </div>
+              </article>
+              <article class="release-card">
+                <div class="release-card__img-wrap">
+                  <img src="assets/game-placeholder 4.webp" >
+                  <span class="badge-new">NEW</span>
+                </div>
+                <div class="release-card__body">
+                  <h3 class="release-card__title">Assasin's Creed Valhalla</h3>
+                  <p class="release-card__subtitle">Launch Edition</p>
+                  <div class="release-card__meta">
+                    <span class="release-card__platform">PS5</span>
+                    <span class="release-card__price">USD 69.99</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section>
+            <div class="section-header">
+              <h2>New DLCs</h2>
+              <a href="catalog.html" class="link-view-all">View All</a>
+            </div>
+            <div class="dlcs-grid">
+              <article class="release-card dlc-card">
+                <div class="release-card__img-wrap">
+                  <img src="assets/game-placeholder 5.jpg" >
+                  <span class="badge-dlc">DLC</span>
+                </div>
+                <div class="release-card__body">
+                  <h3 class="release-card__title">Kirby's : Dreamland Quest </h3>
+                  <p class="release-card__subtitle">Expansion Pack</p>
+                  <div class="release-card__meta">
+                    <span class="release-card__platform">Nintendo Switch</span>
+                    <span class="release-card__price">USD 29.99</span>
+                  </div>
+                </div>
+              </article>
+              <article class="release-card dlc-card">
+                <div class="release-card__img-wrap">
+                  <img src="assets/game-placeholder 6.webp" >
+                  <span class="badge-dlc">DLC</span>
+                </div>
+                <div class="release-card__body">
+                  <h3 class="release-card__title">Spider-Man 3</h3>
+                  <p class="release-card__subtitle">Expansion Pack</p>
+                  <div class="release-card__meta">
+                    <span class="release-card__platform">PC, PS5, Xbox</span>
+                    <span class="release-card__price">USD 19.99</span>
+                  </div>
+                </div>
+              </article>
+              <article class="release-card dlc-card">
+                <div class="release-card__img-wrap">
+                  <img src="assets/game-placeholder 7.jpg" >
+                  <span class="badge-dlc">DLC</span>
+                </div>
+                <div class="release-card__body">
+                  <h3 class="release-card__title">Assassin's Creed Valhalla</h3>
+                  <p class="release-card__subtitle">Season Pass Content</p>
+                  <div class="release-card__meta">
+                    <span class="release-card__platform">PC, PS5, Xbox</span>
+                    <span class="release-card__price">USD 14.99</span>
+                  </div>
+                </div>
+              </article>
+              <article class="release-card dlc-card">
+                <div class="release-card__img-wrap">
+                  <img src="assets/game-placeholder 8.jpg" >
+                  <span class="badge-dlc">DLC</span>
+                </div>
+                <div class="release-card__body">
+                  <h3 class="release-card__title">Minecraft Dungeons</h3>
+                  <p class="release-card__subtitle">Major Expansion</p>
+                  <div class="release-card__meta">
+                    <span class="release-card__platform">PC, PS5, Xbox</span>
+                    <span class="release-card__price">USD 39.99</span>
+                  </div>
+                </div>
+              </article>
+              <article class="release-card dlc-card">
+                <div class="release-card__img-wrap">
+                  <img src="assets/game-placeholder 9.jpg" >
+                  <span class="badge-dlc">DLC</span>
+                </div>
+                <div class="release-card__body">
+                  <h3 class="release-card__title">Assassin's Creed Mirage: Deluxe Pack</h3>
+                  <p class="release-card__subtitle">Bonus Content Bundle</p>
+                  <div class="release-card__meta">
+                    <span class="release-card__platform">PC, PS5, Xbox</span>
+                    <span class="release-card__price">USD 9.99</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+
+        <aside class="bestsellers-panel">
+          <div class="section-header">
+            <h2>Best Sellers</h2>
+            <a href="catalog.html" class="link-view-all">View All</a>
+          </div>
+          <ol class="bestseller-list">
+            <li class="bestseller-item">
+              <span class="rank-circle">1</span>
+              <div class="bestseller-thumb">
+                <img src="assets\game-placeholder 1.png" >
+              </div>
+              <div class="bestseller-info">
+                <h4>Mario Kart 8 Deluxe</h4>
+                <p class="edition">Standard Edition</p>
+              </div>
+              <span class="bestseller-price">USD 14.99</span>
+            </li>
+            <li class="bestseller-item">
+              <span class="rank-circle">2</span>
+              <div class="bestseller-thumb">
+                <img src="assets/game-placeholder 2.jpg" >
+              </div>
+              <div class="bestseller-info">
+                <h4>PLAQUETALE REQUIEM</h4>
+                <p class="edition">Ultimate Edition</p>
+              </div>
+              <span class="bestseller-price">USD 19.99</span>
+            </li>
+            <li class="bestseller-item">
+              <span class="rank-circle">3</span>
+              <div class="bestseller-thumb">
+                <img src="assets/game-placeholder 3.jpg" >
+              </div>
+              <div class="bestseller-info">
+                <h4>Call of Duty: MWIII</h4>
+                <p class="edition">Standard Edition</p>
+              </div>
+              <span class="bestseller-price">USD 29.99</span>
+            </li>
+            <li class="bestseller-item">
+              <span class="rank-circle">4</span>
+              <div class="bestseller-thumb">
+                <img src="assets/game-placeholder 4.webp" >
+              </div>
+              <div class="bestseller-info">
+                <h4>Assassin's Creed Mirage</h4>
+                <p class="edition">Deluxe Edition</p>
+              </div>
+              <span class="bestseller-price">USD 34.99</span>
+            </li>
+            <li class="bestseller-item">
+              <span class="rank-circle">5</span>
+              <div class="bestseller-thumb">
+                <img src="assets/game-placeholder 5.jpg" >
+              </div>
+              <div class="bestseller-info">
+                <h4>Kirby's Dream Land 3</h4>
+                <p class="edition">Complete Edition</p>
+              </div>
+              <span class="bestseller-price">USD 24.99</span>
+            </li>
+          </ol>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="newsletter-bar">
+      <div class="newsletter-brand">
+        <img src="assets/logo.png" alt="" class="logo-img" width="36" height="36">
+        <p><strong>Subscribe to our newsletter</strong>Get the latest deals and news!</p>
+      </div>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" placeholder="Your email address" aria-label="Email for newsletter" required>
+        <button type="submit" class="btn-subscribe">Subscribe</button>
+      </form>
+    </div>
+    <div class="footer-social">
+      <span>Follow Us</span>
+      <div class="social-links">
+        <a href="#" class="social-link" aria-label="Discord">DC</a>
+        <a href="#" class="social-link" aria-label="Facebook">FB</a>
+        <a href="#" class="social-link" aria-label="X Twitter">X</a>
+        <a href="#" class="social-link" aria-label="Instagram">IG</a>
+        <a href="#" class="social-link" aria-label="YouTube">YT</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2015 - 2026 gameStoB. All rights reserved.</p>
+      <div class="footer-policies">
+        <a href="#">Terms of Service</a>
+        <span class="sep">|</span>
+        <a href="#">Privacy Policy</a>
+        <span class="sep">|</span>
+        <a href="#">Refund Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

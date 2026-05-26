@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>gameStoB - About Us</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="glitch-bg" id="glitchBg" aria-hidden="true">
+    <div class="glitch-bg__slice"></div>
+    <div class="glitch-bg__noise"></div>
+    <div class="glitch-bg__glow" id="glitchGlow"></div>
+    <div class="glitch-bg__rgb"></div>
+    <div class="glitch-bg__scanlines"></div>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="gameStoB home">
+        <img src="assets/logo.png" alt="" class="logo-img" width="42" height="42">
+        <span class="logo-text">gameStoB</span>
+      </a>
+      <button type="button" class="nav-toggle" id="navToggle" aria-label="Toggle menu">Menu</button>
+      <nav class="main-nav" id="mainNav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catalog.html">Catalog</a></li>
+          <li><a href="purchase.html">Purchase</a></li>
+          <li><a href="about.html" class="active">About Us</a></li>
+          <li><a href="locations.html">Locations</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <form class="search-form" role="search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/>
+          </svg>
+          <input type="search" placeholder="Search games..." aria-label="Search games">
+        </form>
+        <a href="purchase.html" class="cart-link" aria-label="Cart">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+          </svg>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </a>
+        <button type="button" class="btn-login">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+          </svg>
+          Login
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <h1>About <span>gameStoB</span></h1>
+      <p>Your trusted destination for authentic digital keys, new releases, and DLC since 2015.</p>
+    </section>
+
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-card">
+          <h2>Our Story</h2>
+          <p>
+            gameStoB was founded in 2015 with a mission to make gaming accessible worldwide.
+            We combine instant digital delivery with a growing network of physical stores,
+            giving players the freedom to shop how they want.
+          </p>
+          <p>
+            Every key in our catalog is 100% authentic and sourced from official publishers.
+            From blockbuster AAA launches to indie gems and seasonal DLC, we curate a library
+            of over 5,000 titles across PC, PlayStation, Xbox, and Nintendo platforms.
+          </p>
+        </div>
+        <div>
+          <img class="about-img" src="assets/store-placeholder.png" alt="gameStoB store interior">
+        </div>
+      </div>
+
+      <div class="stats-row">
+        <div class="stat-box">
+          <p class="num">2015</p>
+          <p>Year Founded</p>
+        </div>
+        <div class="stat-box">
+          <p class="num">5,000+</p>
+          <p>Titles Available</p>
+        </div>
+        <div class="stat-box">
+          <p class="num">Global</p>
+          <p>Physical Locations</p>
+        </div>
+      </div>
+
+      <div class="about-card about-card--spaced">
+        <h2>What We Offer</h2>
+        <p>
+          <strong>Authentic Keys:</strong> Official digital keys delivered in seconds, backed by our guarantee.
+        </p>
+        <p>
+          <strong>New Releases:</strong> Day-one access to the latest games, expansions, and pre-orders.
+        </p>
+        <p>
+          <strong>DLCs &amp; Add-ons:</strong> Expand your favorite titles with premium content packs and season passes.
+        </p>
+        <p>
+          <strong>Global Stores:</strong> Visit our physical locations for demos, trade-ins, and same-day pickup.
+          See our <a href="locations.html" class="text-accent">Locations</a> page for store hours and addresses.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="newsletter-bar">
+      <div class="newsletter-brand">
+        <img src="assets/logo.png" alt="" class="logo-img" width="36" height="36">
+        <p><strong>Subscribe to our newsletter</strong>Get the latest deals and news!</p>
+      </div>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" placeholder="Your email address" aria-label="Email" required>
+        <button type="submit" class="btn-subscribe">Subscribe</button>
+      </form>
+    </div>
+    <div class="footer-social">
+      <span>Follow Us</span>
+      <div class="social-links">
+        <a href="#" class="social-link" aria-label="Discord">DC</a>
+        <a href="#" class="social-link" aria-label="Facebook">FB</a>
+        <a href="#" class="social-link" aria-label="X">X</a>
+        <a href="#" class="social-link" aria-label="Instagram">IG</a>
+        <a href="#" class="social-link" aria-label="YouTube">YT</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2015 - 2026 gameStoB. All rights reserved.</p>
+      <div class="footer-policies">
+        <a href="#">Terms of Service</a><span class="sep">|</span>
+        <a href="#">Privacy Policy</a><span class="sep">|</span>
+        <a href="#">Refund Policy</a>
+      </div>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
