@@ -31,10 +31,16 @@ function initProductCards() {
     var cartBtn = event.target.closest(".btn-add-cart");
 
     if (buyBtn) {
-      event.preventDefault();
-      window.location.href = "purchase.html";
-      return;
-    }
+  event.preventDefault();
+
+  var card = buyBtn.closest(".release-card");
+  if (card) {
+    addToCart(getProductFromCard(card));
+  }
+
+  window.location.href = "purchase.html";
+  return;
+}
 
     if (cartBtn) {
       event.preventDefault();
